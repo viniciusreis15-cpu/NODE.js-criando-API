@@ -1,7 +1,10 @@
 import express from "express";
 // variavel para acessar os metodos express
 const app = express();
+//ativa o leitor json
+app.use(express.json())
 
+let usuarios = [];
 // rota saidas de dados
 app.get('/usuario',(req, res)=>{
   res.send("/Informação Enviada")
@@ -9,7 +12,8 @@ app.get('/usuario',(req, res)=>{
 
 app.post()'/usuarios',(req, res)={
   console.log(req.body);
-  res.status(201).jason({mensagem:})
+  usuario.push(req.body);
+  res.status(201).jason({mensagem:"Cliente Cadastrado!"})
 })
 
 app.listen(3000,()=>){
